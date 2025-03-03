@@ -4,7 +4,8 @@ CIRCUIT 1
 
 AIM: Design and analyze the MOS differential amplifier circuit for the following specifications.
 Vdd=2.5V,P<=3mW,Vicm=1.3V,Vocm=1.4V,Vp=0.5V. Perform DC analysis,transient analysis,and frequency response and extract the required parameters.
-CIRCUIT DIAGRAM: blob:https://web.whatsapp.com/edc05304-6a59-41b4-b193-69281e269229
+CIRCUIT DIAGRAM: ![image](https://github.com/user-attachments/assets/6517842a-a382-4a34-89b1-340af4a62dae)
+
 THEORY:
 Amplifiers are a basic part of analog circuit design, and MOSFETs serve as excellent amplification devices. Among the various amplifier configurations, the common-source (CS) amplifier is widely used. It is characterized by having the gate as the input, the drain as the output, and the source as the common terminal for AC signals.
 CS Amplifier with a Resistor Load
@@ -24,29 +25,27 @@ PROCEDURE:
  Click on File → New Schematic to open a new schematic window.
 3. Place Components
 Power Supply (V1)
-    Press F2 (Component selector).
-    Search for voltage and place it in the schematic.
-    Right-click on it and set DC Value = 2.5V.
-    Connect it to the top node of the circuit.
+     *Press F2 (Component selector).
+    * Search for voltage and place it in the schematic.
+     *Right-click on it and set DC Value = 2.5V.
+    *Connect it to the top node of the circuit.
 Resistors (R1, R2, R3)
-    Press F2 and select resistor.
-    Place three resistors:
-        R1 and R2 = 1.833kΩ (connected from V1 to the drain of each MOSFET).
-        R3 = 0.4166kΩ (connected from the MOSFET source node to ground).
-    Right-click each resistor to edit values.
+   *Place three resistors:
+   * R1 and R2 = 1.833kΩ (connected from V1 to the drain of each MOSFET).
+   *R3 = 0.4166kΩ (connected from the MOSFET source node to ground).
+    *Right-click each resistor to edit values.
 MOSFETs (M1, M2)
-    Press F2, search for NMOS, and place two NMOS transistors.
-    Ensure that the drains are connected to R1 and R2, respectively.
-    Connect the sources of both MOSFETs together and to R3.
-    Ensure the gates are connected to V2 and V3.
+    #Press F2, search for NMOS, and place two NMOS transistors.
+   # Ensure that the drains are connected to R1 and R2, respectively.
+    #Connect the sources of both MOSFETs together and to R3.
+    #Ensure the gates are connected to V2 and V3.
 Input DC Sources (V2, V3)
-    Press F2, select voltage, and place two DC voltage sources.
-    Set both sources to 1.3V (Right-click → Set DC value to 1.3V).
+    $Press F2, select voltage, and place two DC voltage sources.
+     Set both sources to 1.3V (Right-click → Set DC value to 1.3V).
     Connect V2 to the gate of M1 and V3 to the gate of M2.
 4. Connect Ground
     Press G to place a ground.
     Connect ground to V2, V3, and the bottom node of R3.
-blob:https://web.whatsapp.com/717a3aec-28f3-4bbb-8078-06ec6648f35c
 5. Simulation Settings
    Click on Simulate → Edit Simulation Cmd.
     Go to DC Op Pnt (Operating Point Analysis).
@@ -91,11 +90,15 @@ Gain = 14.6dB
 
 RESULTS:
 DC Operating Point
-blob:https://web.whatsapp.com/6d4229a5-feb5-4887-b5bd-173ed9ca4a8e
+![image](https://github.com/user-attachments/assets/44c12d60-8ebf-413d-b54a-25304b4c0c4d)
+
 AC analysis
-blob:https://web.whatsapp.com/b60cc1f8-d918-4563-b47f-69eeaac9129a
+![image](https://github.com/user-attachments/assets/862ac7d1-c281-4369-8d8e-f3575459952e)
+
 Transient analysis
-blob:https://web.whatsapp.com/7ea687d1-9017-4dcb-8e06-a6618db08144
+![image](https://github.com/user-attachments/assets/ca51fc52-fc44-49b1-88a0-be3db8e79af8)
+
+
 
 
 INFERENCE:
@@ -111,17 +114,20 @@ RESULT:
 1. DC Operating Point Analysis (.op)
 This will provide bias voltages and currents for all nodes and components.Expect MOSFETs to be in saturation if designed correctly.
 The drain voltages should be symmetric if the circuit is balanced.
-blob:https://web.whatsapp.com/048fe970-4e44-4c84-911a-f93a64c92bc7
+![image](https://github.com/user-attachments/assets/d4f33bfa-428d-4b8b-b37d-66f492072d59)
+
 
 2. Transient Analysis (.tran 5m)
 This shows the time-domain response to sinusoidal inputs.Expect differential amplification:
 If  increases,  should decrease accordingly.The output waveform will depend on the differential gain.
-blob:https://web.whatsapp.com/fbca72dd-c9ad-4665-bfc5-5b87cc23605c
+![image](https://github.com/user-attachments/assets/2374ca9f-f735-4b49-a3b5-d11af25f4363)
+
 
 3. AC Analysis (.ac dec 10 100 100G)
 This gives the frequency response of the circuit.
 Important observations:Gain at low frequencies (mid-band gain).Bandwidth (cutoff frequency) beyond which gain drops.Common-mode rejection (ideally high).
-blob:https://web.whatsapp.com/9843e2a4-2b07-4812-9ff0-58461f688908
+![image](https://github.com/user-attachments/assets/105510f7-e1f0-4edd-8f39-fac039050448)
+
 
 INFERENCE:
 *The circuit amplifies the difference between  and , rejecting common-mode signals.
