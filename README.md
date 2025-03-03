@@ -108,7 +108,8 @@ INFERENCE:
 
 CIRCUIT 2
 CIRCUIT DIAGRAM:
-blob:https://web.whatsapp.com/eb2c383f-f416-4772-bb2c-42cee4447f43
+![image](https://github.com/user-attachments/assets/56bf69a7-58ec-4d43-8611-8922be45800c)
+
 
 RESULT:
 1. DC Operating Point Analysis (.op)
@@ -137,37 +138,14 @@ INFERENCE:
 
 CIRCUIT 3
 RESULT:
-give result and inference for this circuit
-ChatGPT said:
-
 This circuit appears to be a differential pair using NMOS transistors with a current source. The key aspects of this circuit:
-
-    Power Supply: 2.5V (V1).
-    Differential Input Signals: Two sine wave signals (V2 and V3) with 1.3V DC offset, 50mV amplitude, and 1kHz frequency.
-    Load Resistors: R1 and R2 (1.833K each).
-    Current Source: NMOS M3 with a bias voltage of 0.86V (V4).
-    Output Nodes: Drains of M1 and M2.
+Power Supply: 2.5V (V1).
+Differential Input Signals: Two sine wave signals (V2 and V3) with 1.3V DC offset, 50mV amplitude, and 1kHz frequency.
+Load Resistors: R1 and R2 (1.833K each). Current Source: NMOS M3 with a bias voltage of 0.86V (V4).
+Output Nodes: Drains of M1 and M2.
 
 Expected Simulation Results:
-
-    The circuit operates as a differential amplifier, meaning the output voltage will be the difference between the drain voltages of M1 and M2.
-    Since V2 and V3 are complementary sinusoidal signals (AC 1 and AC -1), the output voltage will also be a sinusoidal signal reflecting their difference.
-    The gain of the differential pair depends on the transconductance of the MOSFETs and the load resistance.
-    The current source (M3) provides a stable tail current, ensuring proper differential operation.
-
-Inference:
-
-    The circuit amplifies the differential input signal while rejecting common-mode noise.
-    If M3 operates in saturation, it ensures constant tail current for better linearity.
-    Any mismatch in R1, R2, or MOSFET parameters may introduce common-mode noise.
-    The circuit can be analyzed using small-signal analysis to determine voltage gain and common-mode rejection.
-
-To confirm the behavior, you need to run a transient or AC analysis in SPICE. Let me know if you need help with simulation setup or interpreting results. 🚀
-You said:
-GIVE ALL ANALYSIS
-ChatGPT said:
-
-To fully analyze this differential amplifier circuit, we will perform the following analyses:
+The circuit operates as a differential amplifier, meaning the output voltage will be the difference between the drain voltages of M1 and M2.Since V2 and V3 are complementary sinusoidal signals (AC 1 and AC -1), the output voltage will also be a sinusoidal signal reflecting their difference.The gain of the differential pair depends on the transconductance of the MOSFETs and the load resistance.The current source (M3) provides a stable tail current, ensuring proper differential operation
 
     DC Analysis – To determine biasing conditions.
     AC Small Signal Analysis – To find gain and frequency response.
