@@ -137,6 +137,10 @@ INFERENCE:
 *If designed properly, it functions as a high-gain, differential-input amplifier, useful in analog signal processing.
 
 CIRCUIT 3
+
+CIRCUIT DIAGRAM:
+![circuit](https://github.com/user-attachments/assets/f3ca81e7-3848-4c1d-b71a-06c7a19c361b)
+
 RESULT:
 This circuit appears to be a differential pair using NMOS transistors with a current source. The key aspects of this circuit:
 Power Supply: 2.5V (V1).
